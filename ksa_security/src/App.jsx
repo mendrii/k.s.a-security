@@ -5,10 +5,12 @@ import LandingPage from './LandingPage.jsx'
 function App() {
   return (
     <div className="App">
+
       <LandingPage />
       <Footer />
     </div>
   )
+
 }
 
 export default App
