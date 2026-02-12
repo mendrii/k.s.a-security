@@ -12,6 +12,6 @@ export const sliderData = [
   {
     city: 'Móvil',
     country: 'Control',
-    img: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2000&auto=format&fit=crop', // Foto de alguien mirando el celular
+    img: 'img/camata_pr.jpg', // Foto de alguien mirando el celular
   },
 ];
