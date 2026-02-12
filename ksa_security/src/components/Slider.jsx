@@ -56,6 +56,14 @@ export const Slider = ({ slides }) => {
     runAutochangeTO();
   };
 
+  // Función para hacer scroll suave hasta el formulario
+  const scrollToContact = () => {
+    const section = document.getElementById('contacto');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Prevenir renderizado si no hay datos
   if (!slides) return null;
 
@@ -82,8 +90,8 @@ export const Slider = ({ slides }) => {
                   <span key={i}>{l}</span>
                 ))}
               </h2>
-              <p className="slider__slide-readmore">Ver detalles</p>
             </div>
+            
             
             {/* Aquí ocurre la magia de cortar la imagen */}
             <div className="slider__slide-parts">
@@ -99,6 +107,10 @@ export const Slider = ({ slides }) => {
           </div>
         ))}
       </div>
+
+       <button className="slider__fixed-btn" onClick={scrollToContact}>
+          CONTÁCTANOS
+        </button>
       
       {/* Controles Izquierda / Derecha */}
       <div

@@ -12,11 +12,69 @@ $letterStagger: 0.1s;
   height: 80vh; /* Ojo: Esto ocupa toda la pantalla. Ajustar si es una sección */
   color: #fff;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  background-color: #000;
 
   @mixin sliderReady {
     &.s--ready {
       @content;
     }
+  }
+
+  &-subheading {
+  /* La palabra pequeña de arriba (CONTROL) */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; /* Muy fino */
+  font-size: 18px;  /* Más pequeño */
+  letter-spacing: 8px; /* MUY separado */
+  color: #FFC107; /* Amarillo (tu color de marca) */
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+&-heading {
+  /* La palabra grande (MÓVIL) */
+  font-family: 'Montserrat', sans-serif !important; /* Fuente fuerte */
+  font-weight: 900; /* Extra negrita */
+  font-size: 80px;  /* Grande */
+  letter-spacing: -2px; /* Las letras un poco pegadas entre sí */
+  text-transform: uppercase;
+  line-height: 0.9;
+  
+  /* Sombra sutil para despegarlo del fondo */
+  text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+  /* Botón Fijo Estático */
+  &__fixed-btn {
+    z-index: 1000; /* Super encima de todo */
+    position: absolute;
+    left: 50%;
+    bottom: 20%; /* Ajusta la altura vertical aquí */
+    transform: translateX(-50%); /* Centrado perfecto */
+    
+    /* Estilo Visual (Amarillo) */
+    background-color: #FFC107;
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    
+    /* Transición SOLO para el hover (color), no para moverse */
+    transition: background-color 0.3s, transform 0.3s;
+
+    &:hover {
+      background-color: #ffca2c;
+      transform: translateX(-50%) scale(1.05); /* Crece un poquito */
+    }
+
+    /* Opcional: Si quieres que aparezca suave al cargar la página */
+    opacity: 0;
+    animation: fadeInButton 1s forwards 1s; 
   }
 
   &__top-heading {
@@ -147,6 +205,7 @@ $letterStagger: 0.1s;
       }
     }
 
+   
     &-readmore {
       position: relative;
       font-size: 14px;
@@ -208,7 +267,8 @@ $letterStagger: 0.1s;
       &-inner {
         overflow: hidden;
         position: relative;
-        width: 100%;
+        width: 102%;
+        left: -1%;
         height: 100%;
         background-size: 0 0;
         background-repeat: no-repeat;
@@ -224,6 +284,7 @@ $letterStagger: 0.1s;
           background-position: center center;
           transition: opacity $imageFadeAT;
           opacity: 0;
+          filter: brightness(0.7);
         }
 
         @for $i from 1 through $numOfParts {
@@ -309,4 +370,8 @@ $letterStagger: 0.1s;
       opacity: 1;
     }
   }
+}
+
+@keyframes fadeInButton {
+  to { opacity: 1; }
 }

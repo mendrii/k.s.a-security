@@ -6,12 +6,11 @@ function App() {
   return (
     <div className="App">
 
-      <LandingPage/>
-      <Footer/>
-
+      <LandingPage />
+      <Footer />
     </div>
+  )
 
-);
 }
 
 export default App

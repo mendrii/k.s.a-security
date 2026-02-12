@@ -1,7 +1,7 @@
 import React from 'react';
 import { Slider } from './components/Slider';
 import { sliderData } from "./data/SliderData";
-
+import { Contact } from './components/Contact';
 
 export const LandingPage = () =>{
     return (
@@ -13,6 +13,7 @@ export const LandingPage = () =>{
 
             <section id='servicios' style={{padding:'4rem 2rem'}}>
                 <h2>Nuestros servicios</h2>
+                <Contact/>
 
             </section>
 

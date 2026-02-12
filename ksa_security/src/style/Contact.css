@@ -1,0 +1,175 @@
+/* --- VARIABLES (Colores de KSA Security) --- */
+:root {
+  --ks-white: #ffffff;
+  --ks-blue-dark: #083884;   /* Azul muy oscuro (Fondo de la tarjeta) */
+  --ks-blue-input: #1b263b;  /* Azul medio (Fondo de los inputs) */
+  --ks-yellow: #FFC107;      /* Amarillo (Acción) */
+  --ks-yellow-hover: #ffca2c;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+/* 1. SECCIÓN PRINCIPAL */
+.contact-section {
+  padding: 80px 20px;
+  background-color: var(--ks-white);
+  display: flex;
+  justify-content: center; /* Centra todo horizontalmente */
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 600px; /* Ancho máximo para que no se estire demasiado */
+  text-align: center;
+}
+
+/* 2. TÍTULOS (Fuera del formulario) */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--ks-blue-dark);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Pequeña línea amarilla decorativa debajo del título */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 4px;
+  background-color: var(--ks-yellow);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* 3. LA TARJETA DEL FORMULARIO (Look "Premium") */
+.contact-form {
+  background-color: var(--ks-blue-dark);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(13, 27, 42, 0.3); /* Sombra profunda */
+  text-align: left; /* Los inputs se alinean a la izquierda */
+  color: var(--ks-white);
+}
+
+/* 4. CAMPOS DEL FORMULARIO */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8); /* Blanco con un poco de transparencia */
+  letter-spacing: 0.5px;
+}
+
+/* Estilo de los Inputs y Textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--ks-blue-input); /* Azul un poco más claro que el fondo */
+  border: 2px solid transparent; /* Borde invisible listo para el focus */
+  border-radius: 10px;
+  color: var(--ks-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+}
+
+/* Placeholder (texto de ejemplo) */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* EFECTO AL HACER CLIC (FOCUS) */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background-color: #23304a;
+  border-color: var(--ks-yellow); /* Borde amarillo brillante */
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
+}
+
+/* 5. BOTÓN DE ENVIAR (Amarillo) */
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  margin-top: 10px;
+  background-color: var(--ks-yellow);
+  color: var(--ks-white); /* Texto oscuro para contraste */
+  border: none;
+  border-radius: 50px; /* Botón redondo tipo píldora */
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800; /* Extra negrita */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: var(--ks-yellow-hover);
+  transform: translateY(-3px); /* Se eleva un poco */
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3); /* Sombra brillante */
+}
+
+.btn-submit:active {
+  transform: translateY(-1px);
+}
+
+.btn-submit:disabled {
+  background-color: #555;
+  color: #888;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 6. MENSAJES DE ÉXITO O ERROR */
+.msg-success {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50; /* Verde brillante */
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.msg-error {
+  margin-top: 20px;
+  color: #ff6b6b; /* Rojo suave */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* RESPONSIVE (Móvil) */
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 25px; /* Menos relleno en celulares */
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
