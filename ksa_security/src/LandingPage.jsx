@@ -1,6 +1,6 @@
 import React from 'react';
-import { Slider } from '../components/Slider';
-import { sliderData } from "../data/SliderData";
+import { Slider } from './components/Slider';
+import { sliderData } from "./data/SliderData";
 
 export const LandingPage = () =>{
     return (
