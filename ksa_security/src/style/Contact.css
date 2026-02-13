@@ -108,6 +108,40 @@
   box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
 }
 
+/* Contenedor para el prefijo y el input */
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--ks-blue-input); /* Mismo color que tus inputs */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  overflow: hidden; /* Para que el borde redondeado funcione */
+}
+
+/* El texto "+56" */
+.prefix {
+  padding-left: 16px;
+  padding-right: 8px;
+  color: var(--ks-yellow); /* Amarillo para destacar */
+  font-weight: bold;
+  font-family: var(--font-body);
+}
+
+/* Ajuste al input para que no tenga borde propio ni fondo, ya que el contenedor lo tiene */
+.phone-input-container input {
+  border: none !important;
+  background-color: transparent !important;
+  padding-left: 0 !important; 
+  box-shadow: none !important; 
+}
+
+/* Efecto Focus para todo el contenedor */
+.phone-input-container:focus-within {
+  border-color: var(--ks-yellow);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
+  background-color: #23304a;
+}
+
 /* 5. BOTÓN DE ENVIAR (Amarillo) */
 .btn-submit {
   width: 100%;

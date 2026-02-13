@@ -2,16 +2,16 @@ export const sliderData = [
   {
     city: 'Hogar',
     country: 'Protección',
-    img: 'https://images.pexels.com/photos/28117882/pexels-photo-28117882.jpeg',
+    img: '/img/camaras.webp',
   },
   {
     city: 'Negocio',
     country: 'Monitoreo',
-    img: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000&auto=format&fit=crop', // Foto de oficina/cámaras
+    img: '/img/camras-patio.webp', // Foto de oficina/cámaras
   },
   {
     city: 'Móvil',
     country: 'Control',
-    img: 'img/camata_pr.jpg', // Foto de alguien mirando el celular
+    img: '/img/camata_pr.webp', // Foto de alguien mirando el celular
   },
 ];

@@ -1,7 +1,8 @@
-import React from 'react';
+
+import React, { Suspense, lazy } from 'react';
 import { Slider } from './components/Slider';
 import { sliderData } from "./data/SliderData";
-import { Contact } from './components/Contact';
+const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
 
 export const LandingPage = () =>{
     return (
@@ -13,7 +14,12 @@ export const LandingPage = () =>{
 
             <section id='servicios' style={{padding:'4rem 2rem'}}>
                 <h2>Nuestros servicios</h2>
-                <Contact/>
+               
+               <Suspense fallback={<div>Cargando...</div>}>
+                <div id="contacto">
+                    <Contact />
+                </div>
+                </Suspense>
 
             </section>
 

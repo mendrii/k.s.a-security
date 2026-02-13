@@ -81,6 +81,15 @@ export const Slider = ({ slides }) => {
             })}
             key={slide.city || index}
           >
+            {index === 0 && (
+              <img 
+                src={slide.img} 
+                alt="preload"
+                style={{ display: 'none' }} /* La ocultamos, solo la queremos para descargarla */
+                fetchPriority="high"
+                loading="eager"
+              />
+            )}
             <div className="slider__slide-content">
               <h3 className="slider__slide-subheading">
                 {slide.country || slide.city}

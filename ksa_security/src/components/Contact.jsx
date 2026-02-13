@@ -50,9 +50,23 @@ export const Contact = () => {
             <input type="email" name="user_email" required placeholder="juan@ejemplo.com" />
           </div>
 
-          <div className="form-group">
+           <div className="form-group">
             <label>Teléfono / WhatsApp</label>
-            <input type="tel" name="user_phone" placeholder="+56 9 ..." />
+            <div className="phone-input-container">
+              {/* Agregamos el +56 visualmente para que el usuario solo escriba el resto */}
+              <span className="prefix">+56</span>
+              <input 
+                type="tel" 
+                name="user_phone" 
+                required 
+                placeholder="9 1234 5678"
+                pattern="9[0-9]{8}" 
+                maxLength="9"
+                minLength="9"
+                title="El número debe comenzar con 9 y tener 9 dígitos en total"
+                onInput={(e) => e.target.value = e.target.value.replace(/[^0-9]/g, '')} // Solo permite números
+              />
+            </div>
           </div>
 
           <div className="form-group">
