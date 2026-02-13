@@ -2,6 +2,8 @@
 import React, { Suspense, lazy } from 'react';
 import { Slider } from './components/Slider';
 import { sliderData } from "./data/SliderData";
+import Ubicacion from './components/Ubicacion';
+import './style/Ubicacion.css';
 const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
 
 export const LandingPage = () =>{
@@ -21,6 +23,9 @@ export const LandingPage = () =>{
                 </div>
                 </Suspense>
 
+            </section>
+            <section id='ubicacion'>
+                <Ubicacion />
             </section>
 
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Footer.css'; 
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-left">
           <div className="footer-logo">
             <img 
-              src="logo_ksa.png" 
+              src="/img/logo_ksa.png" 
               alt="K.S.A SECURITY Logo" 
               className="footer-brand-img"
             />
@@ -52,9 +52,9 @@ const Footer = () => {
             </p>
             <div className="footer-socials">
               <a href="#" className="social-icon"><FaFacebookF /></a>
-              <a href="#" className="social-icon"><FaTwitter /></a>
-              <a href="#" className="social-icon"><FaLinkedinIn /></a>
-              <a href="#" className="social-icon"><FaGithub /></a>
+              <a href="#" className="social-icon"><FaInstagram /></a>
+            
+  
             </div>
           </div>
         </div>
