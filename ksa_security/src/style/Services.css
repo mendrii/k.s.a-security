@@ -1,0 +1,196 @@
+.services-section {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: #f9fafb; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.services-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.services-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #002855; 
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.services-title .highlight {
+    color: #fba617; /* Color amarillo para destacar la segunda línea */
+    font-weight: 900; /* Negrita extra para resaltar */
+}
+
+.services-title.left-aligned {
+    text-align: left;
+    font-size: 3rem; /* Aumenta el tamaño del texto */
+    font-weight: 900; /* Más negrita para resaltar */
+    color: #002855; /* Azul oscuro para la primera línea */
+    margin-bottom: 2rem; /* Ajusta el espaciado inferior */
+    margin-top: 4rem; /* Agrega espacio superior para separar las secciones */
+    text-transform: uppercase;
+    line-height: 1.1; /* Reduce el espacio entre líneas */
+}
+
+.services-title.left-aligned .highlight {
+    color: #fba617; /* Color amarillo para la segunda línea */
+    font-weight: 900; /* Negrita extra para resaltar */
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Asegura que haya tres elementos por fila */
+    gap: 1.5rem; /* Ajusta el espacio entre los elementos */
+    width: 100%;
+    justify-content: center; 
+}
+
+.service-card {
+    background-color: #002855; 
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    width: 100%;
+    height: 220px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que las fotos se deformen */
+}
+
+.service-content {
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Empuja el botón hacia abajo */
+}
+
+.service-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    min-height: 3rem; /* Alinea los títulos */
+}
+
+.service-content p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Rellena el espacio vacío */
+}
+
+.service-button {
+    background-color: #fba617; 
+    color: #002855; 
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 800;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: auto; /* Mantiene el botón pegado abajo */
+}
+
+.service-button:hover {
+    background-color: #f59e0b; /* Fondo amarillo más oscuro al pasar el puntero */
+    color: white; /* Texto blanco al pasar el puntero */
+    transform: scale(1.05);
+}
+
+/* --- ESTILOS PARA LA SECCIÓN AZUL CON BOTÓN DE WHATSAPP --- */
+.extra-section {
+    grid-column: span 1; /* Ocupa una columna en la cuadrícula */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #002855; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    height: 100%; /* Alinea con las otras tarjetas */
+}
+
+.extra-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.extra-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.extra-button {
+    background-color: #fba617; /* Fondo amarillo */
+    color: #002855; /* Texto azul oscuro */
+    padding: 0.75rem 1.5rem;
+    border: none; /* Sin borde */
+    border-radius: 9999px;
+    font-weight: 800;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.extra-button:hover {
+    background-color: #f59e0b; /* Fondo amarillo más oscuro al pasar el puntero */
+    color: white; /* Texto blanco al pasar el puntero */
+    transform: scale(1.05);
+}
+
+.service-button, .extra-button {
+    background-color: #fba617; /* Fondo amarillo */
+    color: #002855; /* Texto azul oscuro */
+    padding: 0.75rem 1.5rem;
+    border: none; /* Sin borde */
+    border-radius: 9999px;
+    font-weight: 800;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: auto; /* Mantiene el botón pegado abajo */
+}
+
+.service-button:hover, .extra-button:hover {
+    background-color: #f59e0b; /* Fondo amarillo más oscuro al pasar el puntero */
+    color: white; /* Texto blanco al pasar el puntero */
+    transform: scale(1.05);
+}

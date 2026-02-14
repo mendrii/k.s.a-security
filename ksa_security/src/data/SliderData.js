@@ -5,9 +5,9 @@ export const sliderData = [
     img: '/img/camaras.webp',
   },
   {
-    city: 'Negocio',
+    city: 'Negocios',
     country: 'Monitoreo',
-    img: '/img/camras-patio.webp', // Foto de oficina/cámaras
+    img: '/img/tecnico2.webp', // Foto de oficina/cámaras
   },
   {
     city: 'Móvil',

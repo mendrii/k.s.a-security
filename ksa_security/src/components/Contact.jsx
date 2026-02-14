@@ -1,13 +1,29 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../style/Contact.css';
+import ReCAPTCHA from 'react-google-recaptcha';
+
+
 
 export const Contact = () => {
+  const captchaRef = useRef(null);
+  const [errorCaptcha, setErrorCaptcha] = useState(false);
   const form = useRef();
   const [status, setStatus] = useState(''); // '', 'sending', 'success', 'error'
+  const [captchaValido, setCaptchaValido] = useState(null); // <--- 3. ESTADO PARA SABER SI ES HUMANO
+
+  const onCaptchaChange = (value) => {
+    console.log("Captcha value:", value);
+    setCaptchaValido(value); // Guardamos el token si el usuario pasó la prueba
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
+    // <--- 4. VALIDACIÓN DE SEGURIDAD
+    if (!captchaValido) {
+      setErrorCaptcha(true); // Activamos el mensaje rojo
+      return;
+    }
     setStatus('sending');
 
     // REEMPLAZA ESTOS VALORES CON LOS DE TU CUENTA DE EMAILJS
@@ -24,6 +40,11 @@ export const Contact = () => {
           console.log(result.text);
           setStatus('success');
           e.target.reset(); // Limpia el formulario
+          // <--- 5. REINICIAR EL CAPTCHA AL ENVIAR
+          setCaptchaValido(null);
+          if (captchaRef.current) {
+            captchaRef.current.reset();
+          }
           setTimeout(() => setStatus(''), 5000); // Borra el mensaje a los 5s
         },
         (error) => {
@@ -73,6 +94,22 @@ export const Contact = () => {
             <label>Mensaje</label>
             <textarea name="message" required rows="4" placeholder="Necesito cámaras para mi condominio..."></textarea>
           </div>
+
+          {/* <--- 6. AQUÍ VA EL COMPONENTE VISUAL DEL CAPTCHA */}
+          <div className="form-group captcha-container">
+            <ReCAPTCHA
+              ref={captchaRef}
+              sitekey="6LezumosAAAAALa4gvDqvYN0Rz1YnvgRuzIBHd6X" 
+              onChange={onCaptchaChange}
+              theme="dark" /* Tema oscuro para que combine con tu azul */
+            />
+          </div>
+
+          {errorCaptcha && (
+             <div className="captcha-error-msg">
+               ⚠️ Por favor, confirma que no eres un robot.
+             </div>
+          )}
 
           <button type="submit" className="btn-submit" disabled={status === 'sending'}>
             {status === 'sending' ? 'ENVIANDO...' : 'ENVIAR MENSAJE'}

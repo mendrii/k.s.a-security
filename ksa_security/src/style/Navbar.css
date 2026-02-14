@@ -1,0 +1,119 @@
+.navbar {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #f0f0f0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center; 
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    height: 85px; 
+}
+
+/* LOGO */
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 100px; /* Aumento el tamaño del logo */
+    width: auto;
+    object-fit: contain;
+}
+
+/* ENLACES */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #002855; 
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #f5a623; 
+}
+
+/* BOTÓN DE CONTACTO */
+.nav-links .btn-contacto {
+    background-color: #fba617; 
+    color: #002855; 
+    padding: 10px 26px;
+    border-radius: 50px;
+    font-weight: 800;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-links .btn-contacto:hover {
+    color: #002855;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(251, 166, 23, 0.3);
+}
+
+/* MENÚ PARA CELULARES */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #002855;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .nav-links {
+        display: none; 
+    }
+    .mobile-menu-btn {
+        display: block; 
+    }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+

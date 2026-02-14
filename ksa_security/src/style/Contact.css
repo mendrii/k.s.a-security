@@ -9,18 +9,29 @@
   --font-body: 'Roboto', sans-serif;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* 1. SECCIÓN PRINCIPAL */
 .contact-section {
-  padding: 80px 20px;
-  background-color: var(--ks-white);
+  padding: 80px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/tecnico.webp') center/cover no-repeat fixed;
   display: flex;
   justify-content: center; /* Centra todo horizontalmente */
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+  margin-left: calc(-50vw + 50%);
 }
 
 .contact-container {
   width: 100%;
-  max-width: 600px; /* Ancho máximo para que no se estire demasiado */
   text-align: center;
+  padding: 0 20px;
 }
 
 /* 2. TÍTULOS (Fuera del formulario) */
@@ -28,7 +39,7 @@
   font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 900;
-  color: var(--ks-blue-dark);
+  color: var(--ks-white);
   text-transform: uppercase;
   margin-bottom: 10px;
   position: relative;
@@ -48,7 +59,7 @@
 
 .section-subtitle {
   font-family: var(--font-body);
-  color: #666;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.1rem;
   margin-bottom: 40px;
 }
@@ -57,6 +68,8 @@
 .contact-form {
   background-color: var(--ks-blue-dark);
   padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(13, 27, 42, 0.3); /* Sombra profunda */
   text-align: left; /* Los inputs se alinean a la izquierda */
@@ -83,10 +96,10 @@
 .form-group textarea {
   width: 100%;
   padding: 14px 16px;
-  background-color: var(--ks-blue-input); /* Azul un poco más claro que el fondo */
+  background-color: var(--ks-white); /* Fondo blanco */
   border: 2px solid transparent; /* Borde invisible listo para el focus */
   border-radius: 10px;
-  color: var(--ks-white);
+  color: #000000; /* Texto negro */
   font-family: var(--font-body);
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -96,23 +109,23 @@
 /* Placeholder (texto de ejemplo) */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.3); /* Gris oscuro semitransparente */
 }
 
 /* EFECTO AL HACER CLIC (FOCUS) */
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  background-color: #23304a;
+  background-color: var(--ks-white);
   border-color: var(--ks-yellow); /* Borde amarillo brillante */
-  box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.2);
 }
 
 /* Contenedor para el prefijo y el input */
 .phone-input-container {
   display: flex;
   align-items: center;
-  background-color: var(--ks-blue-input); /* Mismo color que tus inputs */
+  background-color: var(--ks-white); /* Fondo blanco */
   border-radius: 10px;
   border: 2px solid transparent;
   overflow: hidden; /* Para que el borde redondeado funcione */
@@ -122,7 +135,7 @@
 .prefix {
   padding-left: 16px;
   padding-right: 8px;
-  color: var(--ks-yellow); /* Amarillo para destacar */
+  color: #000000; /* Negro para mejor contraste */
   font-weight: bold;
   font-family: var(--font-body);
 }
@@ -138,8 +151,8 @@
 /* Efecto Focus para todo el contenedor */
 .phone-input-container:focus-within {
   border-color: var(--ks-yellow);
-  box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
-  background-color: #23304a;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.2);
+  background-color: var(--ks-white);
 }
 
 /* 5. BOTÓN DE ENVIAR (Amarillo) */
@@ -206,4 +219,37 @@
   .section-title {
     font-size: 2rem;
   }
+}
+
+
+.captcha-container {
+  display: flex;
+  justify-content: center; /* Centra el captcha */
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Mensaje de error del Captcha */
+.captcha-error-msg {
+  color: #ff6b6b; /* Rojo suave */
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff6b6b;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  
+  /* Animación para llamar la atención */
+  animation: shake 0.4s ease-in-out;
+}
+
+/* La animación de temblor */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
 }
