@@ -1,0 +1,255 @@
+/* --- VARIABLES (Colores de KSA Security) --- */
+:root {
+  --ks-white: #ffffff;
+  --ks-blue-dark: #083884;   /* Azul muy oscuro (Fondo de la tarjeta) */
+  --ks-blue-input: #1b263b;  /* Azul medio (Fondo de los inputs) */
+  --ks-yellow: #FFC107;      /* Amarillo (Acción) */
+  --ks-yellow-hover: #ffca2c;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 1. SECCIÓN PRINCIPAL */
+.contact-section {
+  padding: 80px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/tecnico_fondo.webp') center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center; /* Centra todo horizontalmente */
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+  margin-left: calc(-50vw + 50%);
+}
+
+.contact-container {
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* 2. TÍTULOS (Fuera del formulario) */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--ks-white);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Pequeña línea amarilla decorativa debajo del título */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 4px;
+  background-color: var(--ks-yellow);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* 3. LA TARJETA DEL FORMULARIO (Look "Premium") */
+.contact-form {
+  background-color: var(--ks-blue-dark);
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(13, 27, 42, 0.3); /* Sombra profunda */
+  text-align: left; /* Los inputs se alinean a la izquierda */
+  color: var(--ks-white);
+}
+
+/* 4. CAMPOS DEL FORMULARIO */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8); /* Blanco con un poco de transparencia */
+  letter-spacing: 0.5px;
+}
+
+/* Estilo de los Inputs y Textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--ks-white); /* Fondo blanco */
+  border: 2px solid transparent; /* Borde invisible listo para el focus */
+  border-radius: 10px;
+  color: #000000; /* Texto negro */
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+}
+
+/* Placeholder (texto de ejemplo) */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(0, 0, 0, 0.3); /* Gris oscuro semitransparente */
+}
+
+/* EFECTO AL HACER CLIC (FOCUS) */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background-color: var(--ks-white);
+  border-color: var(--ks-yellow); /* Borde amarillo brillante */
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.2);
+}
+
+/* Contenedor para el prefijo y el input */
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--ks-white); /* Fondo blanco */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  overflow: hidden; /* Para que el borde redondeado funcione */
+}
+
+/* El texto "+56" */
+.prefix {
+  padding-left: 16px;
+  padding-right: 8px;
+  color: #000000; /* Negro para mejor contraste */
+  font-weight: bold;
+  font-family: var(--font-body);
+}
+
+/* Ajuste al input para que no tenga borde propio ni fondo, ya que el contenedor lo tiene */
+.phone-input-container input {
+  border: none !important;
+  background-color: transparent !important;
+  padding-left: 0 !important; 
+  box-shadow: none !important; 
+}
+
+/* Efecto Focus para todo el contenedor */
+.phone-input-container:focus-within {
+  border-color: var(--ks-yellow);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.2);
+  background-color: var(--ks-white);
+}
+
+/* 5. BOTÓN DE ENVIAR (Amarillo) */
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  margin-top: 10px;
+  background-color: var(--ks-yellow);
+  color: var(--ks-white); /* Texto oscuro para contraste */
+  border: none;
+  border-radius: 50px; /* Botón redondo tipo píldora */
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800; /* Extra negrita */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: var(--ks-yellow-hover);
+  transform: translateY(-3px); /* Se eleva un poco */
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3); /* Sombra brillante */
+}
+
+.btn-submit:active {
+  transform: translateY(-1px);
+}
+
+.btn-submit:disabled {
+  background-color: #555;
+  color: #888;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 6. MENSAJES DE ÉXITO O ERROR */
+.msg-success {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50; /* Verde brillante */
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.msg-error {
+  margin-top: 20px;
+  color: #ff6b6b; /* Rojo suave */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* RESPONSIVE (Móvil) */
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 25px; /* Menos relleno en celulares */
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+
+.captcha-container {
+  display: flex;
+  justify-content: center; /* Centra el captcha */
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Mensaje de error del Captcha */
+.captcha-error-msg {
+  color: #ff6b6b; /* Rojo suave */
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff6b6b;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  
+  /* Animación para llamar la atención */
+  animation: shake 0.4s ease-in-out;
+}
+
+/* La animación de temblor */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

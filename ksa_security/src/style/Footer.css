@@ -1,0 +1,134 @@
+/* Contenedor principal del footer */
+.footer-container {
+  background-color: #083884; /* Tu azul institucional */
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+/* Contenedor de las 3 columnas */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr; /* Proporciones para que quepa bien el texto */
+  gap: 40px;
+  align-items: start;
+}
+
+/* --- Columna 1: Logo --- */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  margin-bottom: 15px;
+  height: 80px;
+   width: 80px;
+}
+
+.footer-brand-img {
+  height: 140px;
+  width: 140px; /* Importante: debe ser igual al alto */
+  object-fit: contain; /* O 'cover' si quieres que la imagen llene todo el círculo */
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%; /* Esto crea el círculo perfecto */
+  display: inline-block; /* Asegura que se respeten las dimensiones */
+}
+
+/* Texto de Copyright (centrado arriba como en tu captura) */
+.footer-company-name {
+  grid-column: 1 / -1; /* Ocupa todo el ancho */
+  text-align: left;
+  color: #8f9296;
+  font-size: 14px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  order: -1; /* Lo posiciona visualmente al principio en flexbox/grid si se configura */
+}
+
+/* --- Columna 2: Contacto --- */
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-box {
+  background-color: #33383b;
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.footer-contact-item p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.email-link {
+  color: #f6f9f8; /* Color turquesa de la imagen */
+  text-decoration: none;
+}
+
+/* --- Columna 3: About y Redes --- */
+.footer-about h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-about p {
+  line-height: 1.6;
+  color: #c1c1c1; /* Color gris claro para mejor lectura sobre azul */
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  background-color: #33383b;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #1c9acb;
+  transform: translateY(-3px);
+}
+
+/* --- Responsividad --- */
+@media (max-width: 880px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: left; /* Mantenemos alineación a la izquierda en móvil para los iconos */
+  }
+
+  .footer-company-name {
+    margin-bottom: 20px;
+  }
+}

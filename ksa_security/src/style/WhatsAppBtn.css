@@ -1,0 +1,67 @@
+/* --- OPCIÓN 3: RADAR DE SEGURIDAD --- */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366; /* Fondo casi negro técnico */
+  border: 2px solid white; /* Borde amarillo técnico */
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float svg {
+  fill: #ffffff; /* Icono blanco para contraste máximo */
+  z-index: 2; /* Asegura que el icono esté sobre las ondas */
+  transition: transform 0.3s;
+}
+
+/* Animación del Radar (Usa pseudo-elementos para no ensuciar el HTML) */
+.whatsapp-float::before,
+.whatsapp-float::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #25d366; /* Ondas amarillas */
+  opacity: 0;
+  animation: radar-wave 2s linear infinite;
+}
+
+/* La segunda onda sale con retraso */
+.whatsapp-float::after {
+  animation-delay: 1s;
+}
+
+@keyframes radar-wave {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.7); /* Se expande mucho */
+    opacity: 0; /* Se desvanece */
+  }
+}
+
+.whatsapp-float:hover svg {
+  transform: rotate(-15deg) scale(1.1); /* Pequeño gesto al hacer hover */
+}
+
+/* Ajuste móvil */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 50px; height: 50px; bottom: 20px; right: 20px;
+  }
+  @keyframes radar-wave {
+    100% { transform: scale(2); } /* Ondas más pequeñas en móvil */
+  }
+}
