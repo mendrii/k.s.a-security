@@ -2,10 +2,11 @@
 import React, { Suspense, lazy } from 'react';
 import { Slider } from './components/Slider';
 import { sliderData } from "./data/SliderData";
-import Ubicacion from './components/Ubicacion';
-import { Services } from './components/Services';   
+const Ubicacion = lazy(() => import('./components/Ubicacion'));
+import { Services } from './components/Services';  
+import {About} from './components/About'; 
 import './style/Ubicacion.css';
-const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
+import { Contact } from './components/Contact';
 
 export const LandingPage = () =>{
     return (
@@ -16,16 +17,24 @@ export const LandingPage = () =>{
             </section>
 
             <section id='servicios' style={{padding:'4rem 2rem'}}>
-                <h2>Nuestros servicios</h2>
-                <Services />
                
-               <Suspense fallback={<div>Cargando...</div>}>
+                <Services />
+               </section>
+            
+            
+
+            <section id="about">
+                <About />
+            </section>
+
+           
+
+            <Suspense fallback={<div>Cargando...</div>}>
                 <div id="contacto">
                     <Contact />
                 </div>
-                </Suspense>
+            </Suspense>
 
-            </section>
             <section id='ubicacion'>
                 <Ubicacion />
             </section>

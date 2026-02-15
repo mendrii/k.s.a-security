@@ -7,9 +7,9 @@ const IMAGE_PARTS = 4;
 const AUTOCHANGE_TIME = 4000;
 
 export const Slider = ({ slides }) => {
-  const [activeSlide, setActiveSlide] = useState(-1);
+  const [activeSlide, setActiveSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState(-1);
-  const [sliderReady, setSliderReady] = useState(false);
+  const [sliderReady, setSliderReady] = useState(true);
   
   // Usamos useRef para el timeout para evitar fugas de memoria
   const changeTO = useRef(null);
@@ -17,14 +17,14 @@ export const Slider = ({ slides }) => {
   useEffect(() => {
     // Inicialización del slider con un pequeño delay para la animación de entrada
     runAutochangeTO();
-    const timeout = setTimeout(() => {
-      setActiveSlide(0);
-      setSliderReady(true);
-    }, 0);
+    // const timeout = setTimeout(() => {
+    //   setActiveSlide(0);
+    //   setSliderReady(true);
+    // }, 0);
 
     // Cleanup al desmontar
     return () => {
-      clearTimeout(timeout);
+      // clearTimeout(timeout);
       clearTimeout(changeTO.current);
     };
   }, []);
@@ -84,10 +84,11 @@ export const Slider = ({ slides }) => {
             {index === 0 && (
               <img 
                 src={slide.img} 
-                alt="preload"
-                style={{ display: 'none' }} /* La ocultamos, solo la queremos para descargarla */
+                alt="Security Hero"
+               className='slider__hero_image'
                 fetchPriority="high"
                 loading="eager"
+                decoding='async'
               />
             )}
             <div className="slider__slide-content">

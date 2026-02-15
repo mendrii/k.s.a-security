@@ -20,6 +20,29 @@ $letterStagger: 0.1s;
     }
   }
 
+  &__hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la foto no se deforme */
+    z-index: 0;        /* Se queda atrás de todo */
+    opacity: 1;        /* Se ve inmediatamente */
+    filter: brightness(0.8); /* Oscurece un poquito para que el texto resalte */
+  }
+
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que no se deforme */
+    z-index: 0;        /* Se queda en el fondo */
+    opacity: 1;
+  }
+
   &-subheading {
   /* La palabra pequeña de arriba (CONTROL) */
   font-family: 'Roboto', sans-serif;
@@ -273,6 +296,8 @@ $letterStagger: 0.1s;
         background-size: 0 0;
         background-repeat: no-repeat;
         transition: transform $animTime/2 ease-in-out;
+        will-change: transform;
+        transform: translateZ(0);
 
         &:before {
           content: '';

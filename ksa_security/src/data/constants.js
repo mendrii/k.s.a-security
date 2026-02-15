@@ -29,7 +29,7 @@ export const SERVICES = [
     title: 'Cerco Eléctrico',
     shortDescription: 'Disuasión activa contra intrusos.',
     description: 'Instalación de cercos eléctricos con energizador, batería de respaldo y señal de advertencia visible.',
-    image: '/img/cerco_e.webp'
+    image: '/img/cerco_electrico.webp'
   },
   // Categoría: Conectividad y Tecnología
   {
@@ -55,7 +55,7 @@ export const SERVICES = [
     title: 'Instalación y Visita Técnica',
     shortDescription: 'Trabajo prolijo, limpio y garantizado.',
     description: 'Nuestros técnicos certificados realizan instalaciones estéticas (sin cables a la vista) y configuran tus equipos. Incluye capacitación para que aprendas a usar tu sistema.',
-    image: '/img/tecnico_instalador.webp' 
+    image: '/img/tecnico_sonriendo.webp' 
 },
 ];
 
