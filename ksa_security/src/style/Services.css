@@ -9,7 +9,7 @@
 
 .services-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
     text-align: center; 
@@ -51,7 +51,7 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Asegura que haya tres elementos por fila */
+    grid-template-columns: repeat(4, 1fr); /* Asegura que haya tres elementos por fila */
     gap: 1.5rem; /* Ajusta el espacio entre los elementos */
     width: 100%;
     justify-content: center; 
@@ -120,6 +120,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: 100%;
     margin-top: auto; /* Mantiene el botón pegado abajo */
+    text-decoration: none;
 }
 
 .service-button:hover {
@@ -166,6 +167,7 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
 }
 
 .extra-button:hover {
@@ -193,4 +195,18 @@
     background-color: #f59e0b; /* Fondo amarillo más oscuro al pasar el puntero */
     color: white; /* Texto blanco al pasar el puntero */
     transform: scale(1.05);
+}
+
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para Celulares (1 columna) */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }

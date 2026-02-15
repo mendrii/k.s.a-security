@@ -47,7 +47,16 @@ export const SERVICES = [
     shortDescription: 'Internet donde antes no llegaba.',
     description: 'Conectamos sitios alejados o sin infraestructura con enlaces inalámbricos de largo alcance, seguros y estables.',
     image: '/img/conect.webp'
-  }
+  },
+
+  {
+    id: 'c3', // Asegúrate de que el ID no se repita
+    category: 'Conectividad', // O 'Soporte', según como tengas tus filtros
+    title: 'Instalación y Visita Técnica',
+    shortDescription: 'Trabajo prolijo, limpio y garantizado.',
+    description: 'Nuestros técnicos certificados realizan instalaciones estéticas (sin cables a la vista) y configuran tus equipos. Incluye capacitación para que aprendas a usar tu sistema.',
+    image: '/img/tecnico_instalador.webp' 
+},
 ];
 
 export const WHATSAPP_NUMBER = '+56958042898';

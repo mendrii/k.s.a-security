@@ -51,7 +51,7 @@ export const Services = () => {
                     ))}
 
                     {/* Sección adicional en azul */}
-                    <div className="extra-section">
+                    <div className="extra-section services-grid service-card">
                         <h2>¿NECESITAS ALGO MÁS?</h2>
                         <p>Desarrollamos proyectos tecnológicos a medida para edificios y empresas.</p>
                         <a 

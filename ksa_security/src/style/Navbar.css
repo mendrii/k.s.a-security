@@ -18,7 +18,7 @@
     max-width: 1200px;
     width: 100%;
     padding: 0 20px;
-    height: 85px; 
+    height: 70px; 
 }
 
 /* LOGO */
@@ -28,9 +28,10 @@
 }
 
 .nav-logo img {
-    height: 100px; /* Aumento el tamaño del logo */
+    height: 90px; /* Aumento el tamaño del logo */
     width: auto;
     object-fit: contain;
+    border-radius: 50%;
 }
 
 /* ENLACES */
