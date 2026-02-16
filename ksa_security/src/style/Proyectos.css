@@ -1,0 +1,172 @@
+.projects-section {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: #f9fafb; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-title.left-aligned {
+    text-align: center;
+    font-size: 3rem; 
+    font-weight: 900; 
+    color: #002855; 
+    margin-bottom: 2rem; 
+    margin-top: 2rem; 
+    text-transform: uppercase;
+    line-height: 1.1; 
+}
+
+.projects-title.left-aligned .highlight {
+    color: #fba617; 
+    font-weight: 900; 
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem; 
+    width: 100%;
+    justify-content: center; 
+}
+
+.project-card {
+    background-color: #002855; 
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- ESTILOS DEL CARRUSEL ANIMADO --- */
+.project-carousel {
+    width: 100%;
+    height: 220px;
+    overflow: hidden; /* Oculta las imágenes que están fuera del recuadro */
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* Esta transición es la que genera el deslizamiento suave */
+    transition: transform 0.5s ease-in-out; 
+}
+
+.carousel-track img {
+    min-width: 100%; /* Cada imagen ocupa exactamente el 100% del contenedor */
+    height: 100%;
+    object-fit: cover; 
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px; /* Un poquito más arriba para que respire mejor */
+    left: 50%; /* Lo mueve al 50% del ancho de la tarjeta */
+    transform: translateX(-50%); /* Lo centra exactamente en su propio eje */
+    display: flex;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    z-index: 2; /* Asegura que siempre estén por encima de las fotos */
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #fba617; /* El punto activo se pinta del amarillo de la marca */
+}
+/* ------------------------------------ */
+
+.project-content {
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.project-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    min-height: 3rem; 
+}
+
+.project-content p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; 
+}
+
+
+
+.project-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: auto; /* Esto empuja la decoración hacia el fondo de la tarjeta */
+    padding-top: 1rem;
+}
+
+.decoration-line {
+    height: 2px;
+    flex-grow: 1;
+    background-color: #fba617; /* El amarillo de tu marca */
+    opacity: 0.4; /* Lo hacemos semi-transparente para que sea sutil */
+    border-radius: 2px;
+}
+
+.decoration-text {
+    color: #fba617; /* Texto en amarillo para resaltar en el fondo azul oscuro */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- RESPONSIVIDAD --- */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .projects-title.left-aligned {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
