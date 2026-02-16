@@ -36,7 +36,7 @@ export const PROYECTOS_DATA = [
     },
     {
         id: 4,
-        title: "Alarma de seguridad",
+        title: "Alarma de domiciliaria",
         description: "Actualización a sistema de video portero HD inteligente. Los residentes ahora pueden abrir la puerta principal desde su smartphone.",
         images: [
             "https://picsum.photos/400/220?random=41",
