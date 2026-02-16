@@ -1,7 +1,7 @@
 /* --- VARIABLES (Colores de KSA Security) --- */
 :root {
   --ks-white: #ffffff;
-  --ks-blue-dark: #083884;   /* Azul muy oscuro (Fondo de la tarjeta) */
+  --ks-blue-dark:#002855;  /* Azul muy oscuro (Fondo de la tarjeta) */
   --ks-blue-input: #1b263b;  /* Azul medio (Fondo de los inputs) */
   --ks-yellow: #FFC107;      /* Amarillo (Acción) */
   --ks-yellow-hover: #ffca2c;

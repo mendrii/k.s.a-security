@@ -7,6 +7,7 @@ import { Services } from './components/Services';
 import {About} from './components/About'; 
 import './style/Ubicacion.css';
 import { Contact } from './components/Contact';
+import { Proyectos } from './components/Proyectos';
 
 export const LandingPage = () =>{
     return (
@@ -21,7 +22,9 @@ export const LandingPage = () =>{
                 <Services />
                </section>
             
-            
+            <section>
+                <Proyectos />
+            </section>
 
             <section id="about">
                 <About />
