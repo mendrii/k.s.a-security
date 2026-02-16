@@ -30,8 +30,8 @@
 }
 
 .footer-brand-img {
-  height: 140px;
-  width: 140px; /* Importante: debe ser igual al alto */
+  height: 100px;
+  width: 100px; /* Importante: debe ser igual al alto */
   object-fit: contain; /* O 'cover' si quieres que la imagen llene todo el círculo */
   background-color: white;
   padding: 5px;

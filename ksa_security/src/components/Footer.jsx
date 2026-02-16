@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-left">
           <div className="footer-logo">
             <img 
-              src="/img/logo_ksa.png" 
+              src="/img/Logo_terminado.png" 
               alt="K.S.A SECURITY Logo" 
               className="footer-brand-img"
             />
