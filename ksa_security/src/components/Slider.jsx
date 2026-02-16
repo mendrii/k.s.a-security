@@ -2,61 +2,54 @@ import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames';
 import '../style/Slider.scss';
 
-// Constante para dividir la imagen en 4 partes (como en el CSS)
-const IMAGE_PARTS = 4;
-const AUTOCHANGE_TIME = 4000;
+// Configuración del slider
+const IMAGE_PARTS = 4; // Divide la imagen en 4 columnas para la animación
+const AUTOCHANGE_TIME = 4000; // Tiempo de cambio automático (4 segundos)
 
 export const Slider = ({ slides }) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState(-1);
   const [sliderReady, setSliderReady] = useState(true);
   
-  // Usamos useRef para el timeout para evitar fugas de memoria
+  // Referencia para el temporizador de cambio automático
   const changeTO = useRef(null);
 
   useEffect(() => {
-    // Inicialización del slider con un pequeño delay para la animación de entrada
     runAutochangeTO();
-    // const timeout = setTimeout(() => {
-    //   setActiveSlide(0);
-    //   setSliderReady(true);
-    // }, 0);
-
-    // Cleanup al desmontar
+    // Limpieza al desmontar el componente
     return () => {
-      // clearTimeout(timeout);
       clearTimeout(changeTO.current);
     };
   }, []);
 
+  // Función para iniciar/reiniciar el temporizador
   const runAutochangeTO = () => {
-    clearTimeout(changeTO.current); // Limpiamos timer anterior
+    clearTimeout(changeTO.current);
     changeTO.current = setTimeout(() => {
       changeSlides(1);
     }, AUTOCHANGE_TIME);
   };
 
+  // Lógica para cambiar de diapositiva
   const changeSlides = (change) => {
-    // Si no hay slides, no hacemos nada
     if (!slides || slides.length === 0) return;
 
     const length = slides.length;
-    // Capturamos el estado actual
     setActiveSlide((prevActive) => {
       let nextSlide = prevActive + change;
       setPrevSlide(prevActive);
       
+      // Ciclo infinito (al llegar al final vuelve al inicio)
       if (nextSlide < 0) nextSlide = length - 1;
       if (nextSlide >= length) nextSlide = 0;
       
       return nextSlide;
     });
 
-    // Reiniciar el timer automático cada vez que cambiamos slide
     runAutochangeTO();
   };
 
-  // Función para hacer scroll suave hasta el formulario
+  // Función para scroll suave hasta la sección de contacto
   const scrollToContact = () => {
     const section = document.getElementById('contacto');
     if (section) {
@@ -64,12 +57,11 @@ export const Slider = ({ slides }) => {
     }
   };
 
-  // Prevenir renderizado si no hay datos
   if (!slides) return null;
 
   return (
     <div className={classNames('slider', { 's--ready': sliderReady })}>
-      {/* Título flotante fijo */}
+      {/* Título superior fijo */}
       <p className="slider__top-heading">Seguridad & Vigilancia</p>
       
       <div className="slider__slides">
@@ -81,16 +73,7 @@ export const Slider = ({ slides }) => {
             })}
             key={slide.city || index}
           >
-            {index === 0 && (
-              <img 
-                src={slide.img} 
-                alt="Security Hero"
-               className='slider__hero_image'
-                fetchPriority="high"
-                loading="eager"
-                decoding='async'
-              />
-            )}
+            {/* Contenido de texto (Ciudad y País/Categoría) */}
             <div className="slider__slide-content">
               <h3 className="slider__slide-subheading">
                 {slide.country || slide.city}
@@ -102,8 +85,7 @@ export const Slider = ({ slides }) => {
               </h2>
             </div>
             
-            
-            {/* Aquí ocurre la magia de cortar la imagen */}
+            {/* Renderizado de las partes de la imagen (Animación de entrada) */}
             <div className="slider__slide-parts">
               {[...Array(IMAGE_PARTS).fill()].map((x, i) => (
                 <div className="slider__slide-part" key={i}>
@@ -118,11 +100,12 @@ export const Slider = ({ slides }) => {
         ))}
       </div>
 
+      {/* Botón de llamado a la acción fijo */}
        <button className="slider__fixed-btn" onClick={scrollToContact}>
           CONTÁCTANOS
         </button>
       
-      {/* Controles Izquierda / Derecha */}
+      {/* Controles laterales */}
       <div
         className="slider__control"
         onClick={() => changeSlides(-1)}

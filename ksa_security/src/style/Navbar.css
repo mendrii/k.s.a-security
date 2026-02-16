@@ -51,12 +51,12 @@
 }
 
 .nav-links a:hover {
-    color: #f5a623; 
+    color: #FFC107; 
 }
 
 /* BOTÓN DE CONTACTO */
 .nav-links .btn-contacto {
-    background-color: #fba617; 
+    background-color: #FFC107;  
     color: #002855; 
     padding: 10px 26px;
     border-radius: 50px;

@@ -12,6 +12,10 @@ export const Contact = () => {
   const [status, setStatus] = useState(''); // '', 'sending', 'success', 'error'
   const [captchaValido, setCaptchaValido] = useState(null); // <--- 3. ESTADO PARA SABER SI ES HUMANO
 
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const onCaptchaChange = (value) => {
     console.log("Captcha value:", value);
     setCaptchaValido(value); // Guardamos el token si el usuario pasó la prueba
@@ -30,10 +34,10 @@ export const Contact = () => {
     // (Service ID, Template ID, Public Key)
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID', 
-        'YOUR_TEMPLATE_ID', 
+        serviceId, 
+        templateId, 
         form.current, 
-        'YOUR_PUBLIC_KEY'
+        publicKey
       )
       .then(
         (result) => {

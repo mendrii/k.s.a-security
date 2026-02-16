@@ -35,10 +35,9 @@ export const About = () => {
             </p>
             
             <div className="stats-row">
-              {/* <div className="stat-item">
-                <h3>+500</h3>
-                <p>Cámaras Instaladas</p>
-              </div> */}
+              <div className="stat-item">
+                <img src="" alt="certificado sec" />
+              </div>
               <div className="stat-item">
                 <h3>100%</h3>
                 <p>Garantía Técnica</p>

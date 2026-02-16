@@ -5,7 +5,6 @@ import { sliderData } from "./data/SliderData";
 const Ubicacion = lazy(() => import('./components/Ubicacion'));
 import { Services } from './components/Services';  
 import {About} from './components/About'; 
-import './style/Ubicacion.css';
 import { Contact } from './components/Contact';
 import { Proyectos } from './components/Proyectos';
 import { Beneficios } from './components/Beneficios';
