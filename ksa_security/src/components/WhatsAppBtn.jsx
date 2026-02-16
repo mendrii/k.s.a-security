@@ -3,7 +3,7 @@ import '../style/WhatsAppBtn.css'; // Crearemos este archivo después
 
 export const WhatsAppBtn = () => {
   // 1. TU NÚMERO Y MENSAJE
-  const phoneNumber = "569XXXXXXXX"; // Reemplaza con el número real (sin el +)
+  const phoneNumber = "958042898"; // Reemplaza con el número real (sin el +)
   const message = "Hola KSA Security, estoy viendo su web y me gustaría cotizar un sistema de seguridad.";
 
   // 2. CREAMOS EL LINK MÁGICO
