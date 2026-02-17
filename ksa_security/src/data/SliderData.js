@@ -2,7 +2,7 @@ export const sliderData = [
   {
     city: 'Hogar',
     country: 'Protección',
-    img: '/img/cerco_electrico.webp',
+    img: '/img/cerco_slider2.webp',
   },
   {
     city: 'Negocios',

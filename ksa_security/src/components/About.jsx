@@ -11,7 +11,7 @@ export const About = () => {
         <div className="about-hero">
           <div className="about-image-wrapper">
             {/* Usamos la imagen del técnico que generamos o una de equipo */}
-            <img src="/img/equipo_tecnico.webp" alt="Equipo KSA Security" />
+            <img src="/img/equipo_ksa2.webp" alt="Equipo KSA Security" />
             <div className="experience-badge">
               <span className="years">TOP</span>
               <span className="text">CALIDAD</span>
@@ -36,7 +36,10 @@ export const About = () => {
             
             <div className="stats-row">
               <div className="stat-item">
-                <img src="" alt="certificado sec" />
+                <img className="stat-image" src="/img/sec.webp" alt="certificado sec" />
+              </div>
+              <div className="stat-item">
+                <img className="stat-image-square" src="/img/chile_proveedores.png" alt="chile proveedores" />
               </div>
               <div className="stat-item">
                 <h3>100%</h3>
