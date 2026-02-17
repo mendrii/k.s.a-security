@@ -2,7 +2,7 @@
     width: 100%;
     padding: 5rem 0;
     /* Usamos un fondo claro para que contraste con las tarjetas oscuras */
-    background-color: #ffffff; 
+    background-color: #eceef0;
     display: flex;
     justify-content: center;
 }

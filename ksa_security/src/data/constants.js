@@ -51,7 +51,7 @@ export const SERVICES = [
     title: 'Citofonos',
     shortDescription: 'Elimina las zonas muertas de tu casa u oficina.',
     description: 'Sistemas de comunicación con audio nítido y apertura remota de puertas. Soluciones seguras y confiables para el control de acceso en casas, edificios y condominios.',
-    image: '/img/citofono.webp'
+    image: '/img/citofono_servicio.webp'
   },
 {
     id: 's2',

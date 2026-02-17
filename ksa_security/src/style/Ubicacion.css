@@ -1,7 +1,7 @@
 .ubicacion-container {
   /* Color de fondo extraído de la imagen */
-  background-color: #f8fafb; 
-  color: #0d0d0d;
+  background-color: #eceef0; 
+  color: #0b0b0b;
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
