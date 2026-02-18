@@ -15,6 +15,7 @@ const Navbar = () => {
                     <a href="#servicios">NUESTROS SERVICIOS</a>
                     <a href="#ubicacion">UBICACIÓN</a>
                     <a href="#nosotros">NOSOTROS</a>
+                    <a href="#proyectos">PROYECTOS</a>
                     <a href="#contacto" className="btn-contacto">CONTACTO</a>
                 </div>
 

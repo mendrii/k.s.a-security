@@ -1,8 +1,16 @@
 import React from 'react';
 import '../style/Footer.css'; 
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
+  // Función para volver al inicio suavemente
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <footer className="footer-container">
       <div className="footer-content">
@@ -17,8 +25,20 @@ const Footer = () => {
             />
           </div>
           <p className="footer-company-name">SEGURIDAD KSA © 2026</p>
-        </div>
+          
+          {/* NUEVA SECCIÓN: Métodos de Pago */}
+            <div className="footer-payments">
+              <p className="payments-title">Paga seguro con:</p> {/* Título más directo */}
+              <div className="payment-icons">
+                <img 
+                  src="https://puraofertas.cl/wp-content/uploads/2022/06/logo-webpay-plus-3-copy.png" 
+                  alt="Webpay Plus Chile" 
+                  className="payment-img" 
+                />
+              </div>
+            </div>
 
+        </div>
         {/* Centro: Contacto y Horario */}
         <div className="footer-center">
           <div className="footer-contact-item">
@@ -45,21 +65,21 @@ const Footer = () => {
             <h3>ACERCA DE LA EMPRESA</h3>
             <p>
               En KSA SECURITY nos especializamos en proteger lo que más valoras. 
-              Somos expertos en la instalación y mantenimiento de sistemas integrales 
-              de seguridad: cámaras de alta definición, cercos eléctricos certificados, 
-              citofonía avanzada, alarmas inteligentes y videoporteros. 
-              Tu tranquilidad es nuestra prioridad.
+              Expertos en cámaras HD, cercos certificados SEC y alarmas inteligentes.
             </p>
             <div className="footer-socials">
               <a href="#" className="social-icon"><FaFacebookF /></a>
               <a href="#" className="social-icon"><FaInstagram /></a>
-            
-  
             </div>
           </div>
         </div>
 
       </div>
+
+      {/* BOTÓN VOLVER ARRIBA */}
+      <button className="scroll-to-top" onClick={scrollToTop} title="Volver arriba">
+        <FaArrowUp />
+      </button>
     </footer>
   );
 };
