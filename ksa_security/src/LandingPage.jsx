@@ -8,6 +8,7 @@ import {About} from './components/About';
 import { Contact } from './components/Contact';
 import { Proyectos } from './components/Proyectos';
 import { Beneficios } from './components/Beneficios';
+import { Proceso } from './components/Proceso';
 
 export const LandingPage = () =>{
     return (
@@ -21,6 +22,10 @@ export const LandingPage = () =>{
                
                 <Services />
                </section>
+               
+            <section>
+                <Proceso />
+            </section>
             
             <section>
                 <Proyectos />

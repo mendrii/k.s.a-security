@@ -1,0 +1,128 @@
+.proceso-section {
+    padding: 6rem 0;
+    background-color: #ffffff; /* Fondo blanco limpio */
+}
+
+.proceso-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.proceso-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.proceso-header h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #002855;
+    text-transform: uppercase;
+}
+
+.proceso-header .highlight {
+    color: #fba617;
+}
+
+.proceso-header p {
+    color: #0a0a0a;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    font-weight: 600; /* <--- Esto hace que la letra sea más gruesa */
+}
+
+.proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+}
+
+/* Tarjeta de cada paso (ESTADO POR DEFECTO - GRIS) */
+.paso-card {
+    background: #eceef0; /* Fondo gris claro por defecto */
+    padding: 2.5rem 1.5rem;
+    border-radius: 15px;
+    position: relative;
+    border: 1px solid #eee;
+    /* Borde superior azul por defecto */
+    border-top: 5px solid #002855; 
+    /* IMPORTANTE: Agregamos background y border a la transición para que el cambio de color sea suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* EFECTO HOVER: CUANDO EL MOUSE PASA POR ENCIMA */
+.paso-card:hover {
+    background-color: #002855; /* Cambia a azul oscuro */
+    border-top: 5px solid #fba617; /* El borde superior cambia a amarillo */
+    transform: translateY(-8px); /* Se eleva un poquito más */
+    box-shadow: 0 15px 30px rgba(0, 40, 85, 0.2); /* Sombra más pronunciada */
+}
+
+/* Cambio de color del TÍTULO al hacer hover */
+.paso-card:hover h3 {
+    color: #fba617; /* El título se vuelve amarillo para resaltar */
+}
+
+/* Cambio de color del PÁRRAFO al hacer hover */
+.paso-card:hover p {
+    color: rgba(255, 255, 255, 0.9); /* El texto se vuelve blanco casi puro */
+}
+
+/* Cambio de color del NÚMERO GIGANTE de fondo al hacer hover */
+.paso-card:hover .paso-numero {
+    color: #ffffff;
+    opacity: 0.1; /* Se hace blanquito y muy sutil de fondo */
+}
+
+/* El número gigante de fondo */
+.paso-numero {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fba617;
+    opacity: 0.2; /* Transparente para que no moleste la lectura */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    line-height: 1;
+}
+
+
+.paso-card h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #002855; /* Color por defecto */
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease; /* <--- Agrega esto */
+}
+
+.paso-card p {
+    font-size: 0.95rem;
+    color: #555; /* Color por defecto */
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease; /* <--- Agrega esto */
+}
+
+
+
+
+/* Responsivo */
+@media (max-width: 968px) {
+    .proceso-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .proceso-grid {
+        grid-template-columns: 1fr;
+    }
+    .paso-card:nth-child(2) {
+        transform: translateY(0); /* Quitamos el salto en móviles para que se alinee bien */
+    }
+}

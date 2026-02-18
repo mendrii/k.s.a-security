@@ -54,7 +54,27 @@ export const Proyectos = () => {
                                 <div key={proyecto.id} className={`project-slide ${index % 2 !== 0 ? 'reverse' : ''}`}>
                                     
                                     <div className="project-image-wrapper">
-                                        <img src={proyecto.images ? proyecto.images[0] : proyecto.image} alt={proyecto.title} />
+                                        {/* CONDICIONAL DEL VIDEO VIMEO */}
+                                        {proyecto.vimeoId ? (
+                                            <iframe 
+                                                src={`https://player.vimeo.com/video/${proyecto.vimeoId}?background=1&autoplay=1&loop=1&muted=1&badge=0&autopause=0&player_id=0&app_id=58479`} 
+                                                style={{ 
+                                                    position: 'absolute', 
+                                                    top: 0, 
+                                                    left: 0, 
+                                                    width: '100%', 
+                                                    height: '100%',
+                                                    pointerEvents: 'none' /* Evita que el iframe bloquee el mouse */
+                                                }}
+                                                frameBorder="0" 
+                                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                                                referrerPolicy="strict-origin-when-cross-origin"
+                                                title={proyecto.title}
+                                            ></iframe>
+                                        ) : (
+                                            /* IMAGEN POR DEFECTO SI NO HAY VIDEO */
+                                            <img src={proyecto.images ? proyecto.images[0] : proyecto.image} alt={proyecto.title} />
+                                        )}
                                         <div className="image-overlay"></div>
                                     </div>
 
