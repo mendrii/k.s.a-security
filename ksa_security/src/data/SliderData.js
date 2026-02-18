@@ -1,8 +1,8 @@
 export const sliderData = [
   {
-    city: 'Hogar',
-    country: 'Protección',
-    img: '/img/cerco_slider2.webp',
+    city: 'Empresarial',
+    country: 'Seguridad ',
+    img: '/img/cerco_elect_slider.webp ',
   },
   {
     city: 'Negocios',
@@ -10,8 +10,8 @@ export const sliderData = [
     img: '/img/tecnico_instalador_slider.webp', // Foto de oficina/cámaras
   },
   {
-    city: 'Móvil',
-    country: 'Control',
-    img: '/img/hogar_movil.webp', // Foto de alguien mirando el celular
+    city: 'Hogar',
+    country: 'Protección',
+    img: '/img/porton_slider.webp', // Foto de alguien mirando el celular
   },
 ];
