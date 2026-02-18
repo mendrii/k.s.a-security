@@ -7,6 +7,7 @@ import { Services } from './components/Services';
 import {About} from './components/About'; 
 import { Contact } from './components/Contact';
 import { Proyectos } from './components/Proyectos';
+import { Beneficios } from './components/Beneficios';
 
 export const LandingPage = () =>{
     return (
@@ -29,8 +30,11 @@ export const LandingPage = () =>{
                 <About />
             </section>
 
-           
+            <section id="beneficios">
+                <Beneficios />
+            </section>
 
+           
             <Suspense fallback={<div>Cargando...</div>}>
                 <div id="contacto">
                     <Contact />
@@ -40,6 +44,8 @@ export const LandingPage = () =>{
             <section id='ubicacion'>
                 <Ubicacion />
             </section>
+
+
 
         </div>
     )

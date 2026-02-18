@@ -1,0 +1,117 @@
+.benefits-section {
+    width: 100%;
+    padding: 5rem 0;
+    /* Usamos un fondo claro para que contraste con las tarjetas oscuras */
+    background-color: #eceef0;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits-container {
+    width: 100%;
+    max-width: 1200px; /* Un poco más angosto que el de servicios para que se vea compacto */
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reutilización de tus estilos de título para coherencia */
+.benefits-title.left-aligned {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #002855;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.benefits-title.left-aligned .highlight {
+    color: #fba617;
+    font-weight: 900;
+}
+
+/* --- GRID DE BENEFICIOS --- */
+.benefits-grid {
+    display: grid;
+    /* 3 columnas en escritorio para que se vea ordenado y profesional */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; /* Espacio generoso entre tarjetas */
+    width: 100%;
+}
+
+/* --- TARJETA DE BENEFICIO --- */
+.benefit-card {
+    background-color: #002855; /* Fondo azul oscuro de la marca */
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centramos todo el contenido verticalmente */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 20, 50, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    /* ESTO ES CLAVE: Un borde inferior grueso amarillo en lugar de un botón */
+    border-bottom: 6px solid #fba617; 
+}
+
+.benefit-card:hover {
+    /* Un pequeño efecto de elevación al pasar el mouse */
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 20, 50, 0.3);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    /* El color del ícono SVG lo definimos aquí */
+    color: #fba617; 
+}
+
+.benefit-card h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    /* Un blanco ligeramente apagado para que sea fácil de leer */
+    color: rgba(255, 255, 255, 0.9); 
+    margin: 0;
+}
+
+/* --- RESPONSIVIDAD --- */
+
+/* Tablets: 2 columnas */
+@media (max-width: 900px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .benefits-title.left-aligned {
+        font-size: 2.5rem;
+    }
+}
+
+/* Celulares: 1 columna */
+@media (max-width: 600px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .benefits-title.left-aligned {
+        text-align: center; /* Centramos el título en móviles */
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    .benefit-card {
+        padding: 2rem 1.5rem;
+    }
+}

@@ -1,69 +1,96 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../style/Proyectos.css'; 
-import { PROYECTOS_DATA } from '../data/proyect_data'; // Importamos los datos
-
-// Subcomponente: El Carrusel Automático
-const ImageCarousel = ({ images }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    // Animación automática cada 3 segundos
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3000);
-        return () => clearInterval(timer); // Limpieza del intervalo
-    }, [images.length]);
-
-    return (
-        <div className="project-carousel">
-            <div 
-                className="carousel-track" 
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-                {images.map((img, idx) => (
-                    <img key={idx} src={img} alt={`Vista ${idx + 1}`} />
-                ))}
-            </div>
-            {/* Puntitos indicadores del carrusel */}
-            <div className="carousel-indicators">
-                {images.map((_, idx) => (
-                    <span 
-                        key={idx} 
-                        className={`dot ${currentIndex === idx ? 'active' : ''}`}
-                    ></span>
-                ))}
-            </div>
-        </div>
-    );
-};
+import { PROYECTOS_DATA } from '../data/proyect_data'; 
 
 export const Proyectos = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => 
+            prevIndex === PROYECTOS_DATA.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => 
+            prevIndex === 0 ? PROYECTOS_DATA.length - 1 : prevIndex - 1
+        );
+    };
+
+    const goToSlide = (index) => {
+        setCurrentIndex(index);
+    };
+
     return (
         <section id="proyectos" className="projects-section">
             <div className="projects-container">
-                <h2 className="projects-title left-aligned">
-                    PROYECTOS <br />
-                    <span className="highlight">REALIZADOS</span>
-                </h2>
+                
+                <div className="projects-header">
+                    <h2 className="projects-title">
+                        PROYECTOS <span className="highlight">DESTACADOS</span>
+                    </h2>
+                    <p className="projects-subtitle">
+                        Soluciones tecnológicas reales implementadas en la V Región.
+                    </p>
+                </div>
 
-                <div className="projects-grid">
-                    {PROYECTOS_DATA.map((proyecto) => (
-                        <div key={proyecto.id} className="project-card">
-                            {/* Integramos el carrusel en lugar de una imagen estática */}
-                            <ImageCarousel images={proyecto.images} />
-                            
-                            <div className="project-content">
-                                <h3>{proyecto.title}</h3>
-                                <p>{proyecto.description}</p>
-                                <div className="project-decoration">
-                                    <span className="decoration-line"></span>
-                                    <span className="decoration-text">✓ Proyecto Completado</span>
-                                    <span className="decoration-line"></span>
+                {/* CONTENEDOR PRINCIPAL DEL SLIDER */}
+                <div className="projects-slider-wrapper">
+                    
+                    {/* Botón Anterior */}
+                    <button className="slider-arrow prev" onClick={prevSlide}>
+                        &#10094;
+                    </button>
+
+                    {/* Ventana visible del slider */}
+                    <div className="projects-slider-viewport">
+                        {/* Pista que se mueve a los lados */}
+                        <div 
+                            className="projects-slider-track"
+                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                        >
+                            {PROYECTOS_DATA.map((proyecto, index) => (
+                                /* Cada slide mantiene la estructura superpuesta (alternando si es par/impar) */
+                                <div key={proyecto.id} className={`project-slide ${index % 2 !== 0 ? 'reverse' : ''}`}>
+                                    
+                                    <div className="project-image-wrapper">
+                                        <img src={proyecto.images ? proyecto.images[0] : proyecto.image} alt={proyecto.title} />
+                                        <div className="image-overlay"></div>
+                                    </div>
+
+                                    <div className="project-info-box">
+                                        <span className="project-category">Caso de Éxito</span>
+                                        <h3>{proyecto.title}</h3>
+                                        <p>{proyecto.description}</p>
+                                        
+                                        <a href="#contacto" className="project-link">
+                                            Quiero algo similar <span className="arrow">➔</span>
+                                        </a>
+                                    </div>
+
                                 </div>
-                            </div>
+                            ))}
                         </div>
+                    </div>
+
+                    {/* Botón Siguiente */}
+                    <button className="slider-arrow next" onClick={nextSlide}>
+                        &#10095;
+                    </button>
+
+                </div>
+
+                {/* Indicadores (Puntitos) */}
+                <div className="slider-dots">
+                    {PROYECTOS_DATA.map((_, index) => (
+                        <span 
+                            key={index} 
+                            className={`dot ${currentIndex === index ? 'active' : ''}`}
+                            onClick={() => goToSlide(index)}
+                        ></span>
                     ))}
                 </div>
+                
             </div>
         </section>
     );

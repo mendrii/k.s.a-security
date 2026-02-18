@@ -1,7 +1,7 @@
 .ubicacion-container {
   /* Color de fondo extraído de la imagen */
-  background-color: #112232; 
-  color: #ffffff;
+  background-color: #eceef0; 
+  color: #0b0b0b;
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
@@ -54,9 +54,9 @@
   height: 450px;
   border-radius: 12px;
   overflow: hidden;
-  
-  /* Un pequeño borde sutil para que resalte del fondo oscuro */
-  border: 1px solid rgba(255, 255, 255, 0.1); 
+  /* Aumentamos la opacidad del negro a 0.4 (o puedes usar un gris sólido como #7a7a7a) */
+  border: 1px solid rgba(0, 0, 0, 0.7); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
 }
 
 /* Ajustes responsivos para dispositivos móviles */
