@@ -5,10 +5,7 @@ export const PROYECTOS_DATA = [
         id: 1,
         title: "Camaras de seguridad ",
         description: "Instalación de cerco eléctrico perimetral de 800 metros, con energizador certificado y batería de respaldo para cortes de luz.",
-        images: [
-            "https://picsum.photos/400/220?random=11",
-        
-        ]
+        vimeoId: "1165852254"
     },
     {
         id: 2,
@@ -24,18 +21,16 @@ export const PROYECTOS_DATA = [
         title: "Citófono",
         description: "Implementación de red de cámaras CCTV con visión nocturna y resolución 4K, además de DVR con grabación continua de 30 días.",
         images: [
-            "https://picsum.photos/400/220?random=31",
+            "/img/citofono_proyectooos.webp",
            
         ]
     },
     {
         id: 4,
-        title: "Alarma de domiciliaria",
+        title: "Alarma Domiciliaria", 
         description: "Actualización a sistema de video portero HD inteligente. Los residentes ahora pueden abrir la puerta principal desde su smartphone.",
-        images: [
-            "https://picsum.photos/400/220?random=41",
-          
-        ]
+        // En lugar de 'images', usamos 'vimeoId'
+        vimeoId: "1165845068"
     },
     {
         id: 5,
@@ -50,10 +45,7 @@ export const PROYECTOS_DATA = [
         id: 6,
         title: "Control de acceso",
         description: "Instalación de alarmas comunitarias e inalámbricas, con sirenas de alta potencia y sensores de movimiento en áreas de alto flujo.",
-        images: [
-            "https://picsum.photos/400/220?random=61",
-        
-        ]
+        vimeoId: "1165854071"
     },
     {
         id: 7,
@@ -64,13 +56,13 @@ export const PROYECTOS_DATA = [
       
         ]
     },
-    {
-        id: 8,
-        title: "Alarmas comunitarias",
-        description: "Despliegue de cámaras domo PTZ de largo alcance y configuración de sala de monitoreo centralizado (Centro de Control) operativo 24/7.",
-        images: [
-            "https://picsum.photos/400/220?random=81",
+    // {
+    //     id: 8,
+    //     title: "Alarmas comunitarias",
+    //     description: "Despliegue de cámaras domo PTZ de largo alcance y configuración de sala de monitoreo centralizado (Centro de Control) operativo 24/7.",
+    //     images: [
+    //         "https://picsum.photos/400/220?random=81",
          
-        ]
-    }
+    //     ]
+    // }
 ];
