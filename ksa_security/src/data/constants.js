@@ -5,7 +5,7 @@ export const SERVICES = [
     title: 'Cerco Eléctrico',
     shortDescription: 'Disuasión activa contra intrusos.',
     description: 'Instalación de cercos eléctricos con energizador, batería de respaldo y señal de advertencia visible.',
-    image: '/img/cerco_electrico.webp'
+    image: '/img/cerco_elect_slider.webp'
   },
    // Categoría: Conectividad y Tecnología
 

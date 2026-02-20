@@ -21,7 +21,7 @@ export const PROYECTOS_DATA = [
         title: "Citófono",
         description: "Implementación de red de cámaras CCTV con visión nocturna y resolución 4K, además de DVR con grabación continua de 30 días.",
         images: [
-            "/img/citofono_proyectooos.webp",
+            "/img/citofono_proyecto_final.webp",
            
         ]
     },
