@@ -3,59 +3,55 @@
 export const PROYECTOS_DATA = [
     {
         id: 1,
-        title: "Camaras de seguridad ",
-        description: "Instalación de cerco eléctrico perimetral de 800 metros, con energizador certificado y batería de respaldo para cortes de luz.",
+        title: "Cámaras de Seguridad",
+        description: "Implementación de circuito cerrado (CCTV) con cámaras de alta resolución y visión nocturna inteligente. Monitoreo en tiempo real 24/7 directo desde el smartphone del cliente.",
         vimeoId: "1165852254"
     },
     {
         id: 2,
-        title: "Cerco electrico",
-        description: "Modernización del sistema de control de acceso mediante biometría (huella y rostro) integrado con torniquetes en el lobby principal.",
+        title: "Cerco Eléctrico",
+        description: "Instalación perimetral certificada bajo normativa SEC. Incluye energizador de alta potencia, letreros disuasivos y batería de respaldo para mantener la protección aún con cortes de luz.",
         images: [
             "/img/cerco_electrico_proyecto.webp",
-           
         ]
     },
     {
         id: 3,
         title: "Citófono",
-        description: "Implementación de red de cámaras CCTV con visión nocturna y resolución 4K, además de DVR con grabación continua de 30 días.",
+        description: "Renovación de sistema de citofonía tradicional para condominios. Audio nítido, cableado estructurado prolijo y conserjería conectada sin interrupciones ni ruidos de fondo.",
         images: [
             "/img/citofono_proyecto_final.webp",
-           
         ]
     },
     {
         id: 4,
         title: "Alarma Domiciliaria", 
-        description: "Actualización a sistema de video portero HD inteligente. Los residentes ahora pueden abrir la puerta principal desde su smartphone.",
-        // En lugar de 'images', usamos 'vimeoId'
+        description: "Sistema de intrusión integral con sensores de movimiento y apertura de puertas. Sirena de alta potencia exterior y notificaciones inmediatas al celular ante cualquier evento sospechoso.",
         vimeoId: "1165845068"
     },
     {
         id: 5,
-        title: "Porton automatico",
-        description: "Automatización completa de portones de acceso vehicular, integrando sistema de apertura por tag UHF a distancia y cámaras LPR (lectura de patentes).",
+        title: "Portón Automático",
+        description: "Automatización de accesos vehiculares con motores de uso intensivo y apertura ultra rápida. Integración de control remoto anticlonación para máxima seguridad de los residentes.",
         images: [
             "/img/porton_automatico_proyecto.webp",
-            
         ]
     },
     {
         id: 6,
-        title: "Control de acceso",
-        description: "Instalación de alarmas comunitarias e inalámbricas, con sirenas de alta potencia y sensores de movimiento en áreas de alto flujo.",
+        title: "Control de Acceso",
+        description: "Implementación de torniquetes y chapas magnéticas con apertura mediante tarjeta, huella dactilar o clave PIN. Registro de ingresos y salidas administrado por software centralizado.",
         vimeoId: "1165854071"
     },
     {
         id: 7,
-        title: "Video portero",
-        description: "Diseño e implementación de proyecto de megafonía IP y conectividad de red interna (WiFi) de alta velocidad para todos los pabellones.",
+        title: "Video Portero",
+        description: "Actualización a sistema de video portero HD inteligente con pantalla táctil. Los usuarios ahora pueden ver quién toca el timbre y abrir la puerta principal remotamente desde su teléfono.",
         images: [
             "/img/video_portero_proyecto.webp",
-      
         ]
-    },
+    }
+
     // {
     //     id: 8,
     //     title: "Alarmas comunitarias",
