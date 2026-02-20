@@ -6,7 +6,7 @@ const Navbar = () => {
             <div className="nav-container">
                 {/* LOGO */}
                 <div className="nav-logo">
-                    <img src="/img/logo_ksa.png" alt="K.S.A Security" />
+                    <img src="/img/ksalogo.png" alt="K.S.A Security" />
                 </div>
 
                 {/* ENLACES Y BOTÓN */}

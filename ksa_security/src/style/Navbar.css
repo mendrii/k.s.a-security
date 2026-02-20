@@ -28,10 +28,11 @@
 }
 
 .nav-logo img {
-    height: 90px; /* Aumento el tamaño del logo */
+    height: 100px; /* Aumento el tamaño del logo */;
     width: auto;
     object-fit: contain;
-    border-radius: 50%;
+    border-radius: 80%;
+    margin-top: -10px;
 }
 
 /* ENLACES */
