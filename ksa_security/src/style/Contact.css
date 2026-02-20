@@ -210,6 +210,44 @@ body, html {
   font-weight: bold;
 }
 
+.contact-payment-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.payment-text {
+    font-size: 14px;
+    color: #f3f3f3;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.payment-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.payment-img-highlight {
+    height: 70px; /* Tamaño destacado */
+    width: auto;
+    background: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.other-methods {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: #f3f3f3;
+    font-style: italic;
+}
+
 /* RESPONSIVE (Móvil) */
 @media (max-width: 480px) {
   .contact-form {

@@ -121,6 +121,21 @@ export const Contact = () => {
 
           {status === 'success' && <p className="msg-success">¡Mensaje enviado con éxito! Te contactaremos pronto.</p>}
           {status === 'error' && <p className="msg-error">Hubo un error. Por favor escríbenos directo al WhatsApp.</p>}
+
+          <div className="contact-payment-info">
+              <p className="payment-text">Aceptamos múltiples medios de pago para tu comodidad:</p>
+              <div className="payment-display">
+                  <div className="other-methods">
+                      <span>• Transferencia Bancaria</span>
+                      <span>• Tarjetas de Crédito/Débito</span>
+                  </div>
+                   <img 
+                      src="https://puraofertas.cl/wp-content/uploads/2022/06/logo-webpay-plus-3-copy.png" 
+                      alt="Webpay Plus" 
+                      className="payment-img-highlight" 
+                  />
+              </div>
+          </div>
         </form>
       </div>
     </section>
