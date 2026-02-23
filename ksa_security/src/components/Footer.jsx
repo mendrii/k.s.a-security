@@ -20,20 +20,29 @@ const Footer = () => {
           <a href="#contacto">Contacto</a>
         </nav>
 
-        {/* 3. REDES SOCIALES (Círculos) */}
+      {/* 3. REDES SOCIALES (Círculos) */}
         <div className="footer-socials">
-          <a href="#" className="social-circle" aria-label="Twitter">
-            <FaTwitter />
-          </a>
-          <a href="#" className="social-circle" aria-label="Facebook">
+         
+          <a 
+            href="https://www.facebook.com/profile.php?id=61573954964131" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-circle" 
+            aria-label="Facebook"
+          >
             <FaFacebookF />
           </a>
-          <a href="#" className="social-circle" aria-label="Instagram">
+          
+          <a 
+            href="https://www.instagram.com/ksasecurity.cl/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-circle" 
+            aria-label="Instagram"
+          >
             <FaInstagram />
           </a>
-          <a href="#" className="social-circle" aria-label="LinkedIn">
-            <FaLinkedinIn />
-          </a>
+        
         </div>
 
         {/* 4. COPYRIGHT & CREDITOS */}

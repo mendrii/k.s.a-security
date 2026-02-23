@@ -20,7 +20,7 @@ const PASOS = [
     {
         numero: "04",
         titulo: "Capacitación y Post-Venta",
-        descripcion: "No nos vamos hasta que sepas usar todo desde tu celular. Además, cuentas con nuestra garantía técnica total."
+        descripcion: "No damos el trabajo por terminado hasta que sepas controlar todo desde tu celular con total facilidad. Todo esto, respaldado por nuestra garantía y soporte técnico de primer nivel."
     }
 ];
 
