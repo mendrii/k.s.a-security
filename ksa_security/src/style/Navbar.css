@@ -89,6 +89,20 @@
     .mobile-menu-btn {
         display: block; 
     }
+
+    .nav-links.active {
+        display: flex; 
+        flex-direction: column; /* Apila los botones uno debajo de otro */
+        position: absolute;     /* Flota sobre el resto de la página */
+        top: 70px;              /* Empieza justo debajo del Navbar */
+        left: 0;
+        width: 100%;            /* Ocupa todo el ancho del celular */
+        background-color: #ffffff; 
+        padding: 30px 0;        /* Espacio arriba y abajo */
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Sombrilla para el menú */
+        gap: 25px;              /* Separación entre los enlaces */
+        z-index: 99;
+    }
 }
 
 .logo {

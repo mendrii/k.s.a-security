@@ -55,7 +55,7 @@ export const Services = () => {
                         <h2>¿NECESITAS ALGO MÁS?</h2>
                         <p>Desarrollamos proyectos tecnológicos a medida para edificios y empresas.</p>
                         <a 
-                            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola, estoy interesado en desarrollar un proyecto tecnológico a medida.`} 
+                            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola, estoy interesado en sus servicios.`} 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="extra-button"

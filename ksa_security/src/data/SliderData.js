@@ -1,6 +1,6 @@
 export const sliderData = [
   {
-    city: 'Empresarial',
+    city: 'Empresas',
     country: 'Seguridad ',
     img: '/img/cerco_elect_slider.webp ',
   },

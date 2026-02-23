@@ -103,7 +103,7 @@ export const Contact = () => {
           <div className="form-group captcha-container">
             <ReCAPTCHA
               ref={captchaRef}
-              sitekey="6LezumosAAAAALa4gvDqvYN0Rz1YnvgRuzIBHd6X" 
+              sitekey="6LfcenUsAAAAAHbRXBqKfkXInRuWodQnIw66BAV-" 
               onChange={onCaptchaChange}
               theme="dark" /* Tema oscuro para que combine con tu azul */
             />
