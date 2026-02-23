@@ -29,8 +29,7 @@ export const About = () => {
               de tecnología en hogares y condominios.
             </p>
             <p className="description">
-              Nos diferenciamos por el detalle. No dejamos cables colgando, no desaparecemos 
-              después de cobrar y, sobre todo, te enseñamos a usar tu sistema para que 
+              Nos diferenciamos por el detalle. Trabajamos de forma ordenada y con compromiso ,permanecemos disponibles despúes de la entrega y te enseñamos a usar tu sistema para que 
               tengas el control total.
             </p>
             
