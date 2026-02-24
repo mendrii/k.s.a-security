@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames';
 import '../style/Slider.scss';
 
-// Configuración del slider
-const IMAGE_PARTS = 4; // Divide la imagen en 4 columnas para la animación
+
 const AUTOCHANGE_TIME = 4000; // Tiempo de cambio automático (4 segundos)
 
 export const Slider = ({ slides }) => {
@@ -85,17 +84,9 @@ export const Slider = ({ slides }) => {
               </h2>
             </div>
             
-            {/* Renderizado de las partes de la imagen (Animación de entrada) */}
-            <div className="slider__slide-parts">
-              {[...Array(IMAGE_PARTS).fill()].map((x, i) => (
-                <div className="slider__slide-part" key={i}>
-                  <div
-                    className="slider__slide-part-inner"
-                    style={{ backgroundImage: `url(${slide.img})` }}
-                  />
-                </div>
-              ))}
-            </div>
+            {/* Imagen de fondo simplificada */}
+            <img src={slide.img} alt={slide.city} className="slider__slide-image" />
+
           </div>
         ))}
       </div>

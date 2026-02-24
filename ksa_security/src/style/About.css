@@ -2,7 +2,7 @@
 
 .about-section {
     padding: 6rem 1rem;
-    background-color: #ffffff; /* Fondo blanco para contraste con Services (gris) */
+    background-color: #ffffff; 
     overflow: hidden;
 }
 
@@ -207,18 +207,47 @@
     .about-hero {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 3rem; /* Reducimos la separación entre foto y texto */
     }
 
     .about-image-wrapper {
-        max-width: 500px;
+        max-width: 90%; /* Evita que la foto toque los bordes del celular */
         margin: 0 auto;
     }
 
+    
+    .experience-badge {
+        right: 0px; 
+        bottom: -15px;
+        padding: 1rem; 
+    }
+    .experience-badge .years {
+        font-size: 1.5rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem; 
+    }
+
+    
     .stats-row {
         justify-content: center;
+        flex-wrap: wrap; /* ¡Clave! Permite que los elementos bajen si no caben */
+        gap: 1.5rem; /* Reducimos la separación enorme que tenían */
+    }
+
+    /* Achicamos levemente los logos para que quepan todos juntos */
+    .stat-image, .stat-image-square {
+        width: 80px; 
+        height: 80px;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
     }
 
     .about-values-grid {
         grid-template-columns: 1fr;
     }
+
 }
